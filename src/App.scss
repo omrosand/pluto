@@ -1,6 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=PT+Sans:wght@400;700&family=Quicksand:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// Colors:
+$main: #222831;
+$second: #393e46;
+$third: #eeeeee;
+$accent: #ff784b;
+// Fonts::after
+$font-head: "Dancing Script", cursive;
+$font-sub: "PT Sans", sans-serif;
+$font-reg: "Quicksand", sans-serif;
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+.pageWrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  text-align: left;
+  padding-left: 1em;
+  font-size: 3rem;
+  background-color: $main;
+  z-index: 999;
+  a {
+    text-decoration: none;
+    color: $accent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+main {
+  padding: 0 2em;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: start;
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+}
+h1 {
+  color: $accent;
+  font-family: $font-head;
+}
+h2 {
+  color: $accent;
+  font-family: $font-reg;
+  font-size: 1.3rem;
+  margin-top: 1em;
+}
+p {
+  font-family: $font-reg;
+  color: $third;
+}
+a {
+  color: $third;
+  text-decoration: none;
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+nav {
+  background-color: $second;
+  font-family: $font-sub;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  text-align: end;
+  padding: 0.2em 0;
+  box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.5);
+  a {
+    color: $third;
+    text-decoration: none;
+    padding: 0 0.3em;
+    &:not(:last-child) {
+      border-right: 3px solid $main;
+    }
+    &:last-child {
+      margin-right: 1em;
+    }
+  }
+  .active {
+    color: $accent;
+    text-decoration: underline;
+  }
+}
+footer {
+  display: flex;
+  background-color: $second;
+  padding: 2em 0;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: start;
+  margin-top: auto;
+  margin-bottom: 0;
+  font-family: $font-reg;
+  box-shadow: 0px -3px 25px rgba(0, 0, 0, 0.5);
+  h4 {
+    color: $accent;
+  }
+}
+button {
+  padding: 0.5em 1em;
+  font-family: $font-sub;
+  font-size: 1.2rem;
+  background-color: #2e353f;
+  color: $third;
+  border: 2px solid $accent;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #424a56;
+  }
+}
+.notLoggedInOptions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 1em;
+}
+.toolsUsed {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  text-align: center;
+  justify-content: space-between;
+  font-family: $font-reg;
+  margin-top: 2em;
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    border: 1px solid $accent;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    height: 100%;
+    img {
+      width: 120px;
+      height: auto;
+    }
+  }
+  a:nth-child(2) article img {
+    width: 150px;
+    height: auto;
+  }
+  a:nth-child(3) article img {
+    width: 100px;
+    height: auto;
+  }
 }
