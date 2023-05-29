@@ -7,11 +7,18 @@ const Navigation = () => {
         Hjem
       </NavLink>
       <NavLink
+        to="/feed"
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
+        Feed
+      </NavLink>
+      <NavLink
         to="/om"
         className={({ isActive }) => (isActive ? "active" : "")}
       >
         Om prosjektet
       </NavLink>
+
       <NavLink
         to="/profil"
         className={({ isActive }) => (isActive ? "active" : "")}
