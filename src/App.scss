@@ -96,13 +96,22 @@ footer {
   position: absolute;
   bottom: 0;
   background-color: $second;
-  padding: 2em 0;
-  justify-content: space-evenly;
+  padding: 2em;
+  justify-content: space-between;
   flex-wrap: wrap;
   text-align: start;
   width: 100%;
   font-family: $font-reg;
   box-shadow: 0px -3px 25px rgba(0, 0, 0, 0.5);
+  .footerContent {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   h4 {
     color: $accent;
   }
