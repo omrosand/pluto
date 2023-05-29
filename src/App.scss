@@ -128,32 +128,51 @@ button {
 .toolsUsed {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
   text-align: center;
-  justify-content: space-between;
   font-family: $font-reg;
   margin-top: 2em;
-  article {
+  section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
     align-items: center;
-    padding: 1em;
-    gap: 1em;
-    border: 1px solid $accent;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    width: 200px;
-    height: 100%;
-    img {
-      width: 120px;
-      height: auto;
+    gap: 2em;
+    p {
+      max-width: 500px;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1em;
+      gap: 1em;
+      border: 1px solid $accent;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      width: 200px;
+      height: 100%;
+      img {
+        width: 120px;
+        height: auto;
+      }
     }
   }
-  a:nth-child(2) article img {
+  section:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  section:not(:last-child) {
+    border-bottom: 1px solid $third;
+    padding-bottom: 2em;
+  }
+  section:not(:first-child) {
+    padding-top: 2em;
+  }
+  section:nth-child(2) a article img {
     width: 150px;
     height: auto;
   }
-  a:nth-child(3) article img {
+  section:nth-child(3) article img {
     width: 100px;
     height: auto;
   }
